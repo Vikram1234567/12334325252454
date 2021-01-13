@@ -1,0 +1,1 @@
+No Content: https://foes.io/js/static.js

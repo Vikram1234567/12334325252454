@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Foes.io</title>
+    <link rel='shortcut icon' type="image/png" href="../.././images/favicon.png?v=10" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="Foes.io is a free multiplayer battle royale online game">
+    <meta name="keywords" content="game,games,pubg,battleground,royale,fortnite,gaming,online,io,multiplayer,free">
+    <meta http-equiv="Cache-control" content="public">
+    <link rel="stylesheet" href="css/mainstyle.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        // LOAD CORDOVA:
+        if (location.hash.startsWith("#cordova") || localStorage.usingCordova == "true") {
+            localStorage.usingCordova = "true";
+
+            var script = document.createElement("script");
+            if (navigator.userAgent.indexOf('Android') > -1) {
+                script.src = "cordova-platforms/android/cordova.js";
+            } else {
+                script.src = "cordova-platforms/ios/cordova.js";
+            }
+            script.async = false;
+            script.type = "text/javascript";
+            document.head.appendChild(script);
+        }
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-69264675-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script data-cfasync="false" type="text/javascript">
+        if (typeof admob == "undefined") {
+            var freestar = freestar || {};
+            freestar.hitTime = Date.now();
+            freestar.queue = freestar.queue || [];
+            freestar.config = freestar.config || {};
+            freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
+
+            // Tag IDs set here, must match Tags served in the Body for proper setup
+            freestar.config.enabled_slots = [
+                "foesio_728x90_1",
+                "foesio_300x250_1"
+            ];
+
+            ! function(a, b) {
+                var c = b.getElementsByTagName("script")[0],
+                    d = b.createElement("script"),
+                    e = "https://a.pub.network/foes-io";
+                e += freestar.debug ? "/qa/pubfig.min.js" : "/pubfig.min.js", d.async = !0, d.src = e, c.parentNode.insertBefore(d, c)
+            }(window, document);
+        }
+    </script>
+    <script>
+        var vultr = {
+            "scheme": "foes_prod",
+            "servers": [{
+                "ip": "81545f938774b7a6b65b3f028aaa057e",
+                "scheme": "foes_prod",
+                "region": "9",
+                "index": 1,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "b41e19f068fb178b8bc97294f69f7bf2",
+                "scheme": "foes_prod",
+                "region": "39",
+                "index": 1,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "972e40f990239209159b476e60ccf786",
+                "scheme": "foes_prod",
+                "region": "39",
+                "index": 3,
+                "games": [{
+                    "playerCount": 10,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "1ff303e5eb54fb32acc7b01085b356db",
+                "scheme": "foes_prod",
+                "region": "39",
+                "index": 2,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "fae1f276135a7fda0bdd9d534aeba2e6",
+                "scheme": "foes_prod",
+                "region": "39",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "d1fe65ce473d564d956f30ac356caf82",
+                "scheme": "foes_prod",
+                "region": "19",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "c797e188081cf1807525be07639675fd",
+                "scheme": "foes_prod",
+                "region": "24",
+                "index": 0,
+                "games": [{
+                    "playerCount": 1,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "61f8fc0e632e733573cdeee7e326c3ce",
+                "scheme": "foes_prod",
+                "region": "9",
+                "index": 3,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "83822b141dfbbce417f28b0726aff40e",
+                "scheme": "foes_prod",
+                "region": "12",
+                "index": 2,
+                "games": [{
+                    "playerCount": 14,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "e14221c60dfd689b07014b08bc0ba2f0",
+                "scheme": "foes_prod",
+                "region": "9",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "f40a36bea839add94cd0336822ca3024",
+                "scheme": "foes_prod",
+                "region": "40",
+                "index": 1,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "44ba24f66303423fbd05f733d4028dc0",
+                "scheme": "foes_prod",
+                "region": "40",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "5600e1843ff2be8dec26b29a4d2f56ed",
+                "scheme": "foes_prod",
+                "region": "9",
+                "index": 4,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "8d52c31b368991fcd59497ce0a489091",
+                "scheme": "foes_prod",
+                "region": "12",
+                "index": 3,
+                "games": [{
+                    "playerCount": 1,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "b13be3cca0813ce9115052a75cf2f9ad",
+                "scheme": "foes_prod",
+                "region": "24",
+                "index": 1,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "ab5ff6ab8ee7819730fbe85aa861cc62",
+                "scheme": "foes_prod",
+                "region": "24",
+                "index": 2,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "b97f2a009c26cf9e87797b64c70248e4",
+                "scheme": "foes_prod",
+                "region": "12",
+                "index": 4,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "29e82071475c1d79410d90d7a895f104",
+                "scheme": "foes_prod",
+                "region": "12",
+                "index": 1,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "4c2ca6027237c0872264a343e1d9f48e",
+                "scheme": "foes_prod",
+                "region": "25",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "2924e14b172f97f77573e4675625690c",
+                "scheme": "foes_prod",
+                "region": "12",
+                "index": 0,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "1454b7ab8857f780069c5a8a7817c005",
+                "scheme": "foes_prod",
+                "region": "9",
+                "index": 5,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }, {
+                "ip": "5649b89818613b1607c3410dc453165b",
+                "scheme": "foes_prod",
+                "region": "25",
+                "index": 1,
+                "games": [{
+                    "playerCount": 0,
+                    "isPrivate": false
+                }]
+            }]
+        };
+    </script>
+</head>
+
+<body>
+    <!-- PRELOAD SCRIPTS -->
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.core.min.js"></script>
+
+    <!-- MAIN CANVAS -->
+    <canvas id="mainCanvas" oncontextmenu="return false;"></canvas>
+
+    <!-- VIGNETTE -->
+    <img id="vignette" src="./images/shaders/vignette.png" />
+
+    <!-- DARKENER -->
+    <div id="darkener"></div>
+
+    <!-- LOADING CONTAINER -->
+    <div id="loadingContainer">
+        <div id="loadingText">Loading...</div>
+        <div id="loadingSubtext"></div>
+        <div id="reloadButton" class="menuButton" onclick="location.reload()" style="display:none">Reload</div>
+    </div>
+
+    <!-- SETTINGS CONTAINER -->
+    <div id="settingsContainer">
+        <div class="settingsIcon" onclick="showLeaderboard()">
+            <i class='material-icons' style='color:#fff;font-size:45px'>&#xE24B;</i>
+        </div>
+        <div class="settingsIcon" onclick="showInfoScreen(4)">
+            <i class='material-icons' style='color:#fff;font-size:45px'>&#xE8B8;</i>
+        </div>
+        <div id="soundSetting" style="display: inline-block" onclick="toggleSound();"></div>
+    </div>
+
+    <!-- SHARED UI -->
+    <div id="sharedUI">
+        <div id="topMenuContainer">
+            <div id="killCount"></div>
+            <div id="playerCount"></div>
+        </div>
+        <canvas id="minimap"></canvas>
+        <div id="borderTimer">00:00</div>
+    </div>
+
+    <!-- SPECTATE UI -->
+    <div id="spectateContainer">
+        <div id="matchOverContainer">
+            <div id="inGameAd">
+                <div align="center" id="foesio_728x90_1">
+                    <script data-cfasync="false" type="text/javascript">
+                        freestar.queue.push(function() {
+                            googletag.display('foesio_728x90_1');
+                        });
+                    </script>
+                </div>
+            </div>
+            <div id="matchOverText">wait until next round</div>
+        </div>
+        <div id="deathMessage"></div>
+        <div id="gameOverMessage"></div>
+        <div id="roundInfo">
+            <div id="rankCount"></div>
+            <div id="tokenCount"></div>
+        </div>
+        <div id="endButtonHolder">
+            <div id="playAgainButton" class="endButton" onclick="enterGame(true)" style="margin-right:20px">Play Again</div>
+            <div class="endButton" onclick="toggleMenu(true)">Exit to Lobby</div>
+        </div>
+        <div id="spectateText">
+            <div style="color:rgba(255,255,255,0.3);font-size:30px;margin-bottom:15px;">
+                [Mouse1] Next
+            </div>
+            <div style="color:#fff;font-size:52px">Spectating</div>
+        </div>
+    </div>
+
+    <!-- GAME UI -->
+    <div id="uiContainer" style="display:none">
+        <div id="voiceDisplay">
+            <i class="material-icons" style="color:#fff;font-size:40px;">&#xE029;</i>
+        </div>
+        <div id="ammoDisplay" onclick="dropWeapon()">Ammo</div>
+        <div id="interactButton" class="menuButton" onclick="triggerInteract()">interact</div>
+        <div id="roundTimerDisplay"></div>
+        <div id="weaponDisplay" ontouchstart="incrementWeapon(1)"></div>
+        <div id="infoDisplay"></div>
+        <div id="killTextCont">
+            <div id="killText"></div>
+            <div id="killInfo"></div>
+        </div>
+        <div id="staminaDisplay">
+            <div id="effectsList"></div>
+            <canvas id="staminaHolder"></canvas>
+        </div>
+    </div>
+
+    <!-- MAIN MENU -->
+    <div id="roundTimerMenu"></div>
+    <div id="mainMenuContainer" style="display:none">
+        <div id="gameName">FOES.IO</div>
+        <div class="mainMenuSub" id="adParent">
+            <div class="menuCard" id="adCard">
+                <div align="center" id="foesio_300x250_1">
+                    <script data-cfasync="false" type="text/javascript">
+                        freestar.queue.push(function() {
+                            googletag.display('foesio_300x250_1');
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="mainMenuSub" id="buttonCardParent">
+            <div class="menuCard" id="buttonCard">
+                <div id="nameInputParent">
+                    <input type="text" id="nameInput" maxlength="16" placeholder="Enter Name" ontouchend="touchPrompt(event, 'Enter username:')" autofocus></input>
+                    <div class="menuButton" id="goButton" onclick="enterGame()">
+                        <i class="material-icons" style='color:#fff;font-size:32px;'>&#xE037;</i>
+                    </div>
+                </div>
+                <div class="menuButton" style="margin-top:10px" onclick="showInfoScreen(0)">Customize</div>
+                <div class="menuButton" style="margin-top:10px" onclick="showInfoScreen(1)">Servers</div>
+                <div class="menuButton" style="margin-top:10px" onclick="showInfoScreen(2)">Account</div>
+                <div class="menuButton" style="margin-top:10px" onclick="showInfoScreen(3)">How to Play</div>
+                <!-- <div class="menuButton" style="margin-top:10px" onclick="location.reload()">Reload</div> -->
+            </div>
+            <div id="mobileDownloadButtonContainer" class="menuCard">
+                <a class="downloadBadge" href="https://itunes.apple.com/us/app/foes-io/id1326084378?ls=1&mt=8" target="_blank"><img src="./images/badges/ios.svg"></a></img>
+                <a class="downloadBadge" href="https://play.google.com/store/apps/details?id=com.yendis.foes" target="_blank"><img src="./images/badges/android.png"></img></a>
+            </div>
+        </div>
+        <div class="mainMenuSub" id="infoCardParent">
+            <div class="menuCard" id="infoCard" style="text-align:left;max-height:250px;overflow-y:scroll"></div>
+            <div id="downloadButtonContainer" class="menuCard">
+                <a class="downloadBadge" href="https://itunes.apple.com/us/app/foes-io/id1326084378?ls=1&mt=8" target="_blank"><img src="./images/badges/ios.svg"></a></img>
+                <a class="downloadBadge" href="https://play.google.com/store/apps/details?id=com.yendis.foes" target="_blank"><img src="./images/badges/android.png"></img></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOVER INFO -->
+    <div id="hoverDisplay"></div>
+
+    <!-- SHARE CONTAINER -->
+    <div id="shareContainer">
+        Unlock Items: <span onclick='shareGame(0)' class="shareText">Subscribe</span>
+    </div>
+
+    <!-- SHARE LINK -->
+    <div id="shareLink">
+        <div>Play with friends at</div>
+        <div id="shareLinkText">foes.io/?server=0:0</div>
+    </div>
+
+    <!-- CREATED BY CONTAINER -->
+    <div id="createContainer">Created by <a href="https://yendis.ch/">Yendis</a></div>
+
+    <!-- LINKS CONTAINER -->
+    <div id="linksContainer"><span id="versionLink"><a href="http://foes.wiki/other/changelog.html">Beta 0.54</a> | </span><a href="http://foes.wiki/">Wiki</a> |
+        <a href="https://www.reddit.com/r/foesIO/">Reddit</a> | <a href="https://discord.gg/2UYUS3f">Discord</a> |
+        <a href="./docs/terms.txt">Terms</a> | <a href="./docs/privacy.txt">Privacy</a></div>
+
+    <!-- END AD ZONE -->
+    <div id='cdm-zone-end'></div>
+
+    <!-- LOAD GAME SCRIPTS -->
+    <script src="js/static.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
